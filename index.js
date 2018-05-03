@@ -13,12 +13,6 @@ var config = require('./config');
 var fs = require('fs');
 var _data = require('./lib/data');
 
-// TESTING
-// @TODO delete this
-_data.update('test', 'newFile', {'fizz':'buzz'}, function(err){
-  console.log('this was the error', err);
-});
-
 // Instantiate the HTTP server
 var httpServer = http.createServer(function(req, res){
   unifiedServer(req, res);
