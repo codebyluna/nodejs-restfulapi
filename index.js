@@ -78,7 +78,7 @@ var unifiedServer = function(req, res){
       'queryStringObject' : queryStringObject,
       'method' : method,
       'headers' : headers,
-      'payload' : helpers.pareseJsonToObject(buffer)
+      'payload' : helpers.parseJsonToObject(buffer)
     };
 
     // Route the request to the handler specified in the router
@@ -97,10 +97,10 @@ var unifiedServer = function(req, res){
       res.writeHead(statusCode);
       res.end(payloadString);
 
-      console.log('Returning this response: ',statusCode,payloadString);
+      console.log('Returning this response: ',statusCode, payloadString);
     });
   });  
-};
+}; 
 
 // Define a request router
 
